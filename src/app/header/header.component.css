@@ -1,0 +1,11 @@
+.nav-item a{
+    font-size: larger;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    width: 200px;
+}
+

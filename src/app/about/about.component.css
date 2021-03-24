@@ -1,0 +1,26 @@
+.description{
+    padding: 60px 50px 20px;
+}
+p{
+    margin-top: 20px;
+}
+
+.img-thumbnail{
+    background-color: black;
+    border-color: black;
+}
+
+.image-cover{
+    margin-left: 160px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.full-screen{
+    min-height: 100vh;
+}

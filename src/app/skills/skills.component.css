@@ -1,0 +1,19 @@
+.card-text{
+    padding: 4px;
+}
+
+section{
+    margin-top: 20px;
+}
+
+.card{
+    transition: 0.3s; 
+}
+
+.card:hover{
+    transform: scale(0.95);
+}
+
+.full-screen{
+    min-height: 100vh;
+}
