@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
-import { MaterialModule } from '../material/material.module';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -11,7 +14,9 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    MaterialModule
+    MatButtonModule,
+    MatCardModule,
+    FlexLayoutModule
   ]
 })
 export class ProjectsModule { }

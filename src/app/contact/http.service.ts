@@ -5,11 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpService {
-  url = 'https://ng-complete-guide-9eaac-default-rtdb.firebaseio.com/';
+  url = 'https://portfolio-ced40-default-rtdb.firebaseio.com/';
   constructor(private http: HttpClient) { }
 
   storeMessageToDatabase(message: any){
-    this.http.post(this.url, message).subscribe(response =>{
+    message = {}
+    this.http.post(this.url, {title: 'title', content: 'content'}).subscribe(response =>{
       console.log(response);
     });
   }

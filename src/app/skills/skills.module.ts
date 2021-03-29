@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { SkillsRoutingModule } from './skills-routing.module';
 import { SkillsComponent } from './skills.component';
-import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -11,7 +10,7 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule,
     SkillsRoutingModule,
-    MaterialModule
+    // MaterialModule
   ]
 })
 export class SkillsModule { }
