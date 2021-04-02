@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SkillsRoutingModule } from './skills-routing.module';
-import { SkillsComponent } from './skills.component';
+import { SkillsComponent } from './components/skills-default/skills.component';
 
 
 @NgModule({
@@ -13,4 +13,4 @@ import { SkillsComponent } from './skills.component';
     // MaterialModule
   ]
 })
-export class SkillsModule { }
+export class SkillsModule { }   

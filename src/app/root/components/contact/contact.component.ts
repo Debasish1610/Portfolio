@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpService } from './http.service';
+import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-contact',

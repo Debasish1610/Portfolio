@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contests.component.css']
 })
 export class ContestsComponent implements OnInit {
+  activated = false;
 
-  constructor() { }
+  constructor() { } 
 
   ngOnInit(): void {
   }

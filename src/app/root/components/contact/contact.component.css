@@ -1,0 +1,73 @@
+
+.icon-style{
+    height: 50px;
+    width: 50px;
+    border: 2px whitesmoke solid;
+    background-color: transparent;
+    border-radius: 50%;
+    color: whitesmoke;
+    transition: all 0.4s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-style:hover{
+    border-color: blue;
+    transform: scale(0.99);
+}
+
+
+.bg-custom{
+    background-color: #2C3E50;
+    color: #9d9d9d;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+.form-section{
+    /* background-color: red; */
+    padding-top: 20px;
+
+}
+.icon-section{
+    /* background-color: blue; */
+    padding-top: 40px;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+.warning-message{
+    color:rgb(194, 63, 63); 
+    font-size: small;
+    padding-left: 40px;
+}
+
+mat-form-field{
+    width: 100%;
+    padding: 5px 60px 0px 40px;
+}
+mat-label{
+    color: #9d9d9d;
+}
+button{
+    border-radius: 8px;
+    width: 100px;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: 5px;
+    background-color: rgb(16, 138, 16);
+}
+
+.mat-button-disabled:hover{
+    cursor: not-allowed;
+}
