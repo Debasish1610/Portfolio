@@ -24,5 +24,10 @@
 }
 
 mat-card > img {
-  height: 220px;
+  /* height: 220px; */
+}
+
+mat-card-content a{
+  color: white;
+  text-decoration: none;
 }

@@ -1,0 +1,18 @@
+  mat-header-cell{
+      font-size: 15px
+  }
+  mat-cell{
+      font-size: 13px;
+  }
+
+  .padding-60{
+    padding: 60px;
+  }
+
+  .fw-500{
+    font-weight: 500;
+  }
+
+  .align-center{
+    text-align: center;
+  }

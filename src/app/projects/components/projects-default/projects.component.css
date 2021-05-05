@@ -14,13 +14,7 @@ mat-card>img{
     height: 220px;
 }
 
-
-
-/* .card{
-    box-shadow: 0px 4px 6px 0px gray;
-    margin: 10px;
+.pt-40{
+    padding-top: 40px;
 }
 
-.card:hover{
-    transform: scale(1.04);
-} */

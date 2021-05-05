@@ -1,17 +1,25 @@
-<div class="bg-dark text-white full-screen">
-  <div class="row" style="padding-top: 100px">
-    <div class="col-sm-6">
-      <div class=" description">
-          <h1 style="font-size: 40px;">Hey, I'm Debasish</h1>
-          <p class="text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, ad corrupti ut a aspernatur assumenda voluptate dignissimos asperiores necessitatibus vel dolore exercitationem cumque quis unde nesciunt nihil omnis eaque rem!</p>
-          <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi pariatur neque itaque nobis? Quibusdam esse excepturi explicabo laudantium dignissimos velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatum perferendis obcaecati eos facere quas tenetur excepturi quia mollitia iste!</p>
+<div class="full-screen bg-dark">
+  <div class="" fxLayout="row wrap">
+    <div class="description" fxFlex="50%" fxFlex.lt-md = "100%">
+      <div
+        fxLayout = "column" fxLayoutAlign = "center" fxLayoutAlign.lt-md = "center center"
+        [ngClass.lt-md]="{'pt-50':true}"
+        [ngClass]="{'pt-190':true, 'pl-30': true}"
+      >
+        <h4>Hello I'm Debasish</h4>
+        <h1>Software Engineer</h1>
+        <p >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          amet quae debitis modi provident, aspernatur labore neque possimus
+          asperiores dicta.
+        </p>
+        <div class="cv-link" fxLayout="row" fxLayoutAlign="center center">
+          <a href="">Download My CV</a>
+        </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="image-cover">
-          <img src="../../assets/img/coder-two.jpg" alt="" class="img-thumbnail">
-      </div>
+    <div fxFlex="50%" fxFlex.lt-md = "100%" fxLayout = "row" fxLayoutAlign = "center">
+      <img style="padding-top: 55px;" src="../../../../assets/img/unnamed1.png" alt="">
     </div>
   </div>
 </div>
-

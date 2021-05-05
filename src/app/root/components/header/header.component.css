@@ -1,11 +1,36 @@
-.nav-item a{
-    font-size: larger;
-    margin-left: 6px;
-    margin-right: 6px;
+.mat-toolbar{
+    background-color: #343a40!important;
+    color: rgb(167, 164, 164);
+    position: fixed;
+    z-index: 10;
 }
 
-.navbar-brand{
-    font-size: 30px;
-    width: 200px;
+.mat-toolbar h1{
+    font-size: 30px !important;
+    color: rgb(228 164 46);
 }
 
+.mat-toolbar-row{
+    padding: 0px 50px;
+}
+
+.mat-button{
+    font-size: 18px;
+}
+
+.mat-button:hover{
+    text-decoration: none;
+    color: inherit
+}
+
+.mat-icon{
+    color: rgb(228 164 46);
+}
+
+.h-100vh{
+    height: 100vh;
+}
+
+.pt-64{
+    padding-top: 64px;
+}

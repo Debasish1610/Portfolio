@@ -1,0 +1,46 @@
+<div class="bg-light mh-100vh">
+  <h1>Codeforces Contest Profile</h1>
+  <div class="w-100" fxLayout="row" fxLayoutAlign="center" *ngIf = "!isLoading">
+    <div class="abc">
+      <table class="w-100p">
+        <tr>
+          <td>Handle</td>
+          <td>
+            <span class="color-cyan">{{ handle }}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Current Rating</td>
+          <td>
+            {{ currentRating }} <span class="specialist">(specialist)</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Max Rating</td>
+          <td>{{ maxRating }} <span class="expert">(expert)</span></td>
+        </tr>
+        <tr>
+          <td>Contest Participated</td>
+          <td>{{ contestsParticipated }}</td>
+        </tr>
+        <tr>
+          <td>Problem Solved</td>
+          <td>{{ problemSolved }}</td>
+        </tr>
+        <tr>
+          <td>See Submission Details</td>
+          <td>
+            <mat-slide-toggle (click)="submissionToggle()" color="primary">
+            </mat-slide-toggle>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <app-spin-loader *ngIf = "isLoading"></app-spin-loader>
+
+  <app-codeforces-submission-details
+    *ngIf="showSubmissionDetails"
+  ></app-codeforces-submission-details>
+</div>

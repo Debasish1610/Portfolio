@@ -1,33 +1,53 @@
 <div class="bg-light full-screen">
-    <div class="container" style="padding-top: 90px">
-      <div align="center">
-        <h1>Skills</h1>
-        <p>Things that i'm good at</p>
+  <div class="container">
+    <div class="skills-header">
+      <h1 class="skills-header-text">My Skills</h1>
+      <div class="underline"></div>
+    </div>
+
+    <div fxLayout="column" style="min-height: 100vh">
+      <div fxFlex="50%" fxLayout="row" fxLayoutAlign="none center">
+        <div fxFlex="20%" fxFlex.lt-md="100%">
+          <div class="skill-title">Programming Language</div>
+        </div>
+        <div class="language-charts" fxFlex="80%" fxFlex.lt-md="100%">
+          <ngx-charts-pie-grid
+            [scheme]="colorScheme"
+            [results]="language"
+            (select)="onSelect($event)"
+            [minWidth]="minWidth"
+            [label] = "''"
+            [designatedTotal] = "designatedTotal"
+          >
+          </ngx-charts-pie-grid>
+        </div>
       </div>
-      <section>
-        <h3>Programming language</h3>
-        <div class="card-columns text-white">
-          <div class="card bg-success" *ngFor="let skill of skills.language">
-            <div class="card-text">{{ skill }}</div>
-          </div>
+      <div
+        fxFlex="50%"
+        fxLayout="row"
+        fxLayoutAlign="none center"
+        style="padding-left: 100px"
+      >
+        <div fxFlex="20%" fxFlex.lt-md="100%">
+          <div class="skill-title">Frameworks & Tools</div>
         </div>
-      </section>
-      <section>
-        <h3>Frameworks</h3>
-        <div class="card-columns text-white">
-          <div class="card bg-info" *ngFor="let skill of skills.framework">
-            <div class="card-text">{{ skill }}</div>
-          </div>
+
+        <div fxFlex="80%" fxFlex.lt-md="100%">
+          <ngx-charts-bar-horizontal
+            [results]="frameWorkAndTools"
+            [view]="frameWorkAndToolsView"
+            [scheme]="frameWorkAndToolsColorScheme"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [xScaleMax] = "xScaleMax"
+          >
+          </ngx-charts-bar-horizontal>
         </div>
-      </section>
-      <section>
-        <h3>Tools</h3>
-        <div class="card-columns text-white">
-          <div class="card bg-secondary" *ngFor="let skill of skills.tools">
-            <div class="card-text">{{ skill }}</div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   </div>
-  
+</div>

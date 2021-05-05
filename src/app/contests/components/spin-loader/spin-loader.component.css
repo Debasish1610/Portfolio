@@ -1,4 +1,4 @@
- /*Loading spinner  */
+/*Loading spinner  */
 .lds-spinner {
     color: official;
     display: inline-block;
@@ -83,11 +83,4 @@
       display: flex;
       justify-content: center;
       align-items: center;
-  }
-
-  mat-header-cell{
-      font-size: 15px
-  }
-  mat-cell{
-      font-size: 13px;
   }

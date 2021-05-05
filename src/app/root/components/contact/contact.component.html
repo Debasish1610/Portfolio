@@ -1,130 +1,6 @@
-<!-- <div class="bg-custom">
-  <div style="padding-top: 70px" class="row">
-    <div class="col-sm-6 sub-total" style="padding-left: 50px"> -->
-<!-- <form [formGroup]="queryMessage">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Name*"
-            id="name"
-            formControlName="name"
-            name="name"
-          />
-        </div>
-        <p
-          style="color: rgb(194, 63, 63); font-size: small"
-          *ngIf="
-            !queryMessage.get('name').valid && queryMessage.get('name').touched
-          "
-        >
-          Name mustn't be empty
-        </p>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Email*"
-            id="email"
-            formControlName="email"
-            name="email"
-          />
-        </div>
-        <p
-          style="color: rgb(194, 63, 63); font-size: small"
-          *ngIf="
-            !queryMessage.get('email').value &&
-            queryMessage.get('email').touched
-          "
-        >
-          Email mustn't be empty
-        </p>
-        <p
-          style="color: rgb(194, 63, 63); font-size: small"
-          *ngIf="
-            queryMessage.get('email').value &&
-            !queryMessage.get('email').valid &&
-            queryMessage.get('email').touched
-          "
-        >
-          Email is not valid
-        </p>
-        <div class="form-group">
-          <label for="message">How can I help? </label>
-          <textarea
-            type="text"
-            class="form-control"
-            placeholder="Message*"
-            id="message"
-            name="message"
-            formControlName="message"
-            rows="10"
-          ></textarea>
-        </div>
-        <p
-          style="color: red; font-size: small"
-          *ngIf="
-            !queryMessage.get('message').valid &&
-            queryMessage.get('message').touched
-          "
-        >
-          Message mustn't be empty
-        </p>
-        <button
-          [disabled]="queryMessage.invalid"
-          type="submit"
-          class="btn btn-primary"
-          (click) = "onSubmit()"
-        >
-          Send
-        </button>
-      </form> -->
-<!-- <form [formGroup]="queryMessage">
-        <div>
-          <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input type="text" matInput formControlName="name" />
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input type="email" matInput formControlName="email" />
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <mat-label>Email</mat-label>
-            <textarea
-              matInput
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              formControlName="message"
-            ></textarea>
-          </mat-form-field>
-        </div>
-      </form>
-    </div>
-    <div class="col-sm-6 sub-total">
-      <div style="margin-top: 40px">
-        <h3 style="text-align: center; font-size: larger">Around The Web</h3>
-        <div class="icon-container">
-          <a href="#"><i class="fab fa-facebook-f icon-style"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in icon-style"></i></a>
-          <a href="#"><i class="fab fa-github icon-style"></i></a>
-          <a href="#"><i class="fab fa-instagram icon-style"></i></a>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
 <div class="bg-custom" fxLayout="row wrap">
-  <div class="form-section" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs = "100%">
-    <form [formGroup]="queryMessage">
+  <div class="form-section" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
+    <form [formGroup]="queryMessage" (ngSubmit)="onSubmit()">
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Name*</mat-label>
@@ -187,17 +63,27 @@
         </p>
       </div>
       <div>
-        <button [disabled]="queryMessage.invalid" type="submit" mat-raised-button>Submit</button>
+        <button
+          [disabled]="queryMessage.invalid"
+          type="submit"
+          mat-raised-button
+          color = "primary"
+          (click) = "openSnackBar()"
+        >
+          Submit
+        </button>
       </div>
     </form>
   </div>
-  <div class="icon-section" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs = "100%">
-    <h3 style="text-align: center; font-size: larger">Around The Web</h3>
-    <div class="icon-container">
-      <a href="#"><i class="fab fa-facebook-f icon-style"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in icon-style"></i></a>
-      <a href="#"><i class="fab fa-github icon-style"></i></a>
-      <a href="#"><i class="fab fa-instagram icon-style"></i></a>
+  <div class="icon-section" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%">
+    <div fxLayout="column" fxLayoutAlign="center" style="height: 50vh;">
+      <h3 class="contact-title">Around The Web</h3>
+      <div class="icon-container">
+        <a href="#"><i class="fab fa-facebook-f icon-style"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in icon-style"></i></a>
+        <a href="#"><i class="fab fa-github icon-style"></i></a>
+        <a href="#"><i class="fab fa-instagram icon-style"></i></a>
+      </div>
     </div>
   </div>
 </div>

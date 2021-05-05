@@ -1,16 +1,9 @@
-
-.icon-style{
-    height: 50px;
-    width: 50px;
-    border: 2px whitesmoke solid;
-    background-color: transparent;
-    border-radius: 50%;
-    color: whitesmoke;
-    transition: all 0.4s linear;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.icon-section{
+    padding-top: 40px;
+    font-size: 20px;
+    margin-bottom: 100px;
 }
+
 .icon-container{
     margin-left: auto;
     margin-right: auto;
@@ -21,29 +14,40 @@
     align-items: center;
 }
 
+.icon-style{
+    height: 50px;
+    width: 50px;
+    border: 2px whitesmoke solid;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    transition: all 0.4s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon-style:hover{
     border-color: blue;
     transform: scale(0.99);
+    text-decoration: none;
 }
 
+.contact-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
 
 .bg-custom{
-    background-color: #2C3E50;
     color: #9d9d9d;
     width: 100%;
     min-height: 100vh;
-    padding-top: 70px;
+    padding-top: 50px;
 }
-.form-section{
-    /* background-color: red; */
-    padding-top: 20px;
 
-}
-.icon-section{
-    /* background-color: blue; */
-    padding-top: 40px;
-    font-size: 20px;
-    margin-bottom: 100px;
+.form-section{
+    padding-top: 20px;
+    padding-left: 50px;
 }
 
 .warning-message{
@@ -57,7 +61,7 @@ mat-form-field{
     padding: 5px 60px 0px 40px;
 }
 mat-label{
-    color: #9d9d9d;
+    color: #797878;
 }
 button{
     border-radius: 8px;
@@ -65,7 +69,6 @@ button{
     font-size: 18px;
     margin-left: 40px;
     margin-top: 5px;
-    background-color: rgb(16, 138, 16);
 }
 
 .mat-button-disabled:hover{

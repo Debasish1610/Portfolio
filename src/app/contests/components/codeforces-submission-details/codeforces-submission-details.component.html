@@ -1,0 +1,75 @@
+<div class="padding-60">
+    <h2 class="align-center">Codeforces Submission Details</h2>
+    <div class="mat-elevation-z8">
+      <mat-table matSort [dataSource]="dataSource">
+        <ng-container matColumnDef="submissionId">
+          <mat-header-cell *matHeaderCellDef>Submission ID</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.submissionId }}
+          </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="rating">
+          <mat-header-cell mat-sort-header *matHeaderCellDef
+            >Problem Rating</mat-header-cell
+          >
+          <mat-cell *matCellDef="let element"> {{ element.rating }} </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="problemName">
+          <mat-header-cell *matHeaderCellDef> Problem Name </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <a
+              href="https://codeforces.com/problemset/problem/{{ element.contestId }}/{{ element.index }}"
+              target="_blank" 
+              style="text-decoration: none;"
+            >
+              {{ element.problemName }}
+            </a>
+          </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="language">
+          <mat-header-cell *matHeaderCellDef>Language</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.language }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="verdict">
+          <mat-header-cell *matHeaderCellDef> Verdict </mat-header-cell>
+          <mat-cell
+            *matCellDef="let element"
+            class="fw-500"
+            [ngStyle]="{
+              color: element.verdict === 'Accepted' ? 'green' : 'red'
+            }"
+          >
+            {{ element.verdict }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="time">
+          <mat-header-cell mat-sort-header *matHeaderCellDef>
+            Execution Time
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.time }} ms </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="memory">
+          <mat-header-cell mat-sort-header *matHeaderCellDef>
+            Memory
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.memory / 1000 }} KB
+          </mat-cell>
+        </ng-container>
+  
+        <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columns"></mat-row>
+      </mat-table>
+      <mat-paginator
+        [pageSizeOptions]="[20, 50, 100]"
+        [pageSize]="20"
+        showFirstLastButtons
+      >
+      </mat-paginator>
+    </div>
+    <app-spin-loader *ngIf = "isLoading"></app-spin-loader>
+  </div>
+  

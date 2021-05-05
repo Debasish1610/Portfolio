@@ -1,81 +1,23 @@
 <div class="bg-light">
-    <!-- <div style="padding-top: 90px" class="container">
-      <div class="card-columns">
-        <div class="card bg-info">
-          <img
-            src="../../assets/img/codechef.logo.png"
-            alt=""
-            class="card-img-top"
-          />
-          <div class="card-body" >View Profile</div>
-          <a href="#" class="stretched-link"></a>
-        </div>
-        <div class="card bg-info">
-          <img
-            src="../../assets/img/codeforces_logo.png"
-            alt=""
-            class="card-img-top"
-          />
-          <a href="#" class="stretched-link"></a>
-          <div class="card-body">View Profile</div>
-        </div>
-        <div class="card bg-info">
-          <img
-            src="../../assets/img/hackerrank-logo.jpg"
-            alt=""
-            class="card-img-top"
-          />
-          <a href="#" class="stretched-link"></a>
-          <div class="card-body">View Profile</div>
-        </div>
-        <div class="card bg-info">
-          <img
-            src="../../assets/img/loj-og-image.png"
-            alt=""
-            class="card-img-top"
-          />
-          <a href="#" class="stretched-link"></a>
-          <div class="card-body">View Profile</div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="container">
-      <div fxLayout="row wrap" fxLayoutGap="20px grid" fxLayoutAlign = "center center">
-        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%">
-          <mat-card class = "card-image">
-            <img mat-card-image src="../../assets/img/codechef.logo.png" alt="" />
-            <mat-card-content>
-              <h2>View profile</h2>
-            </mat-card-content>
-          </mat-card>
-        </div>
-    
-        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%">
-          <mat-card class = "card-image">
-            <img mat-card-image src="../../assets/img/codeforces_logo.png" alt="" />
-            <mat-card-content>
-              <h2> <a routerLink = "profile"> View profile </a></h2>
-            </mat-card-content>        
-          </mat-card>
-        </div>
-        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%">
-          <mat-card class = "card-image">
-            <img mat-card-image src="../../assets/img/hackerrank-logo.jpg" alt="" />
-            <mat-card-content>
-              <h2> View profile</h2>
-            </mat-card-content>
-          </mat-card>
-        </div>
-    
-        <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%">
-          <mat-card class = "card-image">
-            <img mat-card-image src="../../assets/img/loj-og-image.png" alt="" />
-            <mat-card-content>
-              <h2>View profile</h2>
-            </mat-card-content>
-          </mat-card>
-        </div>
+  <div class="container">
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="20px grid"
+      fxLayoutAlign="center center"
+    >
+      <div
+        fxFlex="30%"
+        fxFlex.xs="100%"
+        fxFlex.sm="50%"
+        *ngFor="let siteData of sitesData"
+      >
+        <mat-card class="card-image">
+          <img mat-card-image src="{{ siteData.imageLink }}" alt="" />
+          <mat-card-content>
+            <h2><a routerLink="{{ siteData.route }}"> View profile</a></h2>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
   </div>
+</div>

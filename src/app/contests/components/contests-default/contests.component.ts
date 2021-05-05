@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { forkJoin } from 'rxjs';
+import { ContestSitesDataService } from '../../services/contest-sites-data.service';
 
 @Component({
   selector: 'app-contests',
@@ -7,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContestsComponent implements OnInit {
   activated = false;
+  solveProblem = [];
+  sitesData:any = [];
 
-  constructor() { } 
+  constructor(private contesSitesData: ContestSitesDataService) { } 
 
   ngOnInit(): void {
+    // forkJoin()
+
+    this.sitesData = this.contesSitesData.getSitesData();
+
   }
 
 }
